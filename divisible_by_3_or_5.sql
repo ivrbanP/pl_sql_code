@@ -10,12 +10,16 @@ begin
         if (i mod 3) = 0 or (i mod 5) = 0 
         then 
             suma:=suma+i;
-            mod_bool_3 := decode (i mod 3, 0,'T','F');
+            case 
+                when (i mod 3)=0 then 
+                    mod_bool_3:='T'; mod_bool_5:='F';
+                when (i mod 5)=0 then 
+                    mod_bool_3:='F'; mod_bool_5:='T';
+            end case;
         else 
             suma:=suma+0; 
-            mod_bool_5 := decode (i mod 5, 0,'T','F');
         end if;
-        insert into run_results values (i, mod_bool_3, mod_bool, suma);
+        insert into run_results values (i, mod_bool_3, mod_bool_5, suma);
     end loop;
     
     commit;
@@ -25,3 +29,8 @@ end;
 
 select * from 
 run_results;
+
+
+select decode ( (1=1),0,'T','F' )  from dual;
+
+
