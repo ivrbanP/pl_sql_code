@@ -646,6 +646,10 @@ begin
         v_provision_rk,
         v_collateral_rk
         ); 
+        
+        if i mod 1000 = 0 then --commit after every 1000th row
+            commit;
+        end if;
     END LOOP; 
     commit; 
 end;
