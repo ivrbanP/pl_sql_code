@@ -602,7 +602,6 @@ from
 
 /
 
-
 -- accounts table
 truncate table accounts;
 declare
@@ -652,6 +651,7 @@ begin
 end;
 
 /
+
 
 select * from 
 ( 
