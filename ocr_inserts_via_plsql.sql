@@ -321,47 +321,47 @@ values
 
 insert into fx_rates (fx_rate_rk,currency_from,currency_to,rate,fx_rate_date) 
 values 
-(seq_fx_rate_rk.nextval,'CHF','EUR','0.8676',to_date('19-09-2019','dd-mm-yyyy'))
+(seq_fx_rate_rk.nextval,'CHF','EUR',0.8676,to_date('19-09-2019','dd-mm-yyyy'))
 ;
 
 insert into fx_rates (fx_rate_rk,currency_from,currency_to,rate,fx_rate_date) 
 values 
-(seq_fx_rate_rk.nextval,'GBP','EUR','1.14051',to_date('19-09-2019','dd-mm-yyyy'))
+(seq_fx_rate_rk.nextval,'GBP','EUR',1.14051,to_date('19-09-2019','dd-mm-yyyy'))
 ;
 
 insert into fx_rates (fx_rate_rk,currency_from,currency_to,rate,fx_rate_date) 
 values 
-(seq_fx_rate_rk.nextval,'HRK','EUR','0.13537',to_date('19-09-2019','dd-mm-yyyy'))
+(seq_fx_rate_rk.nextval,'HRK','EUR',0.13537,to_date('19-09-2019','dd-mm-yyyy'))
 ;
 
 insert into fx_rates (fx_rate_rk,currency_from,currency_to,rate,fx_rate_date) 
 values 
-(seq_fx_rate_rk.nextval,'HUF','EUR','0.0376',to_date('19-09-2019','dd-mm-yyyy'))
+(seq_fx_rate_rk.nextval,'HUF','EUR',0.0376,to_date('19-09-2019','dd-mm-yyyy'))
 ;
 
 insert into fx_rates (fx_rate_rk,currency_from,currency_to,rate,fx_rate_date) 
 values 
-(seq_fx_rate_rk.nextval,'USD','EUR','0.85476',to_date('19-09-2019','dd-mm-yyyy'))
+(seq_fx_rate_rk.nextval,'USD','EUR',0.85476,to_date('19-09-2019','dd-mm-yyyy'))
 ;
 
 insert into fx_rates (fx_rate_rk,currency_from,currency_to,rate,fx_rate_date) 
 values 
-(seq_fx_rate_rk.nextval,'RUB','EUR','0.05476',to_date('19-09-2019','dd-mm-yyyy'))
+(seq_fx_rate_rk.nextval,'RUB','EUR',0.05476,to_date('19-09-2019','dd-mm-yyyy'))
 ;
 
 insert into fx_rates (fx_rate_rk,currency_from,currency_to,rate,fx_rate_date) 
 values 
-(seq_fx_rate_rk.nextval,'RON','EUR','0.95476',to_date('19-09-2019','dd-mm-yyyy'))
+(seq_fx_rate_rk.nextval,'RON','EUR',0.95476,to_date('19-09-2019','dd-mm-yyyy'))
 ;
 
 insert into fx_rates (fx_rate_rk,currency_from,currency_to,rate,fx_rate_date) 
 values 
-(seq_fx_rate_rk.nextval,'BAM','EUR','2.95476',to_date('19-09-2019','dd-mm-yyyy'))
+(seq_fx_rate_rk.nextval,'BAM','EUR',2.95476,to_date('19-09-2019','dd-mm-yyyy'))
 ;
 
 insert into fx_rates (fx_rate_rk,currency_from,currency_to,rate,fx_rate_date) 
 values 
-(seq_fx_rate_rk.nextval,'RSD','EUR','0.75476',to_date('19-09-2019','dd-mm-yyyy'))
+(seq_fx_rate_rk.nextval,'RSD','EUR',0.75476,to_date('19-09-2019','dd-mm-yyyy'))
 ;
 
 select * from fx_rates
@@ -374,7 +374,7 @@ values
 
 insert into collaterals (collateral_rk,collateral_id,collateral_type,expiration_date,effective_date,collateral_amt,collateral_currency) 
 values 
-(seq_collateral_rk.nextval,'12361gf4','CRM_CASH',to_date('10-09-2029','dd-mm-yyyy'),to_date('29-09-2019','dd-mm-yyyy'),'21.52','EUR')
+(seq_collateral_rk.nextval,'12361gf4','CRM_CASH',to_date('10-09-2029','dd-mm-yyyy'),to_date('29-09-2019','dd-mm-yyyy'),21.52,'EUR')
 ;
 
 insert into customers (customer_rk,customer_id,customer_name,customer_country) 
@@ -696,6 +696,7 @@ group by provision_type
 ;
 
 
+commit;
 
 
        
